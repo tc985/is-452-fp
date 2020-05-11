@@ -1,7 +1,7 @@
 # BOOKSTATS
 Final python programming project for IS 452 at Univerisity of Illinois - Urbana Champaign, Spring 2020.
 
-A program to gather statistics from the text of plaintext novels from Project Gutenberg.
+A program to gather statistics from the text of plaintext novels from [Project Gutenberg](https://www.gutenberg.org/)
 
 ## Prerequisites
 
