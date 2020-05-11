@@ -41,7 +41,7 @@ def clean_punc(text):
             cleanline = cleanline.replace(punc, ' ')
     return cleanline
 
-# returns ratio of dialogue to total prose by splitting the text by "
+# returns length of dialogue by splitting the text by "
 def dialogue_length(text):
     total_length = 0
     dia_lst = text.split('"')
