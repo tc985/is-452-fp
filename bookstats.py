@@ -18,6 +18,7 @@ def death_to_johannes(text):
         text_parts[-1] = text_parts[-1][:cut_point]
         del text_parts[0]  # kills everything before the first chapter
 
+        # this section removes the line with any leftover chapter heading text from each index in the list by splitting by \n
         count = 0
         for part in text_parts:
             text_parts[count] = '\n'.join(text_parts[count].split('\n')[2:]) # joins while killing the "chapter" lines
