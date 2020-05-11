@@ -1,0 +1,6 @@
+bookstats
+/bookstats.py --- the python script needed to do all the stuff
+/words_alpha.txt --- a list of English words referenced by bookstats.py
+/README.md --- instructions and information about the project
+/manifest.txt  --- list of files and short descriprions (your're reading it)
+/LICENSE --- standard MIT license
