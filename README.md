@@ -32,8 +32,8 @@ When prompted enter the filename do so and continue to enter files as prompted u
 ## Acknowledgments
 
 * Elizabeth Wickes at UIUC for instrcution, tips, the clean_punc function, and generally being cool
-* dwyl on GitHub for the list of English words used [dwyl](https://github.com/dwyl)
-* PurpleBooth on GitHub for the template for this README [PurpleBooth](https://gist.github.com/PurpleBooth)
+* [dwyl](https://github.com/dwyl) on GitHub for the list of English words used 
+* [PurpleBooth](https://gist.github.com/PurpleBooth) on GitHub for the template for this README 
 
 ## License
 
