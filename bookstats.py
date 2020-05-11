@@ -66,8 +66,9 @@ def cleaner_punc(text):
 
 # find longest word and checks to make sure it's real
 # returns longest word and its length
+# words_alpha.txt from https://github.com/dwyl/english-words
 def longest_word(text):
-    with open('english_words.txt', 'r', encoding = 'utf-8') as f:
+    with open('words_alpha.txt', 'r', encoding = 'utf-8') as f:
         words = [line.strip() for line in f]
 
     word_dict = {}
@@ -76,7 +77,9 @@ def longest_word(text):
             word_dict[w] = len(w)
 
     word_list = list(word_dict.items())
-
+    
+    # this runs every word in the book (collected in dict) against all the
+    # "real words" in words_alpha (it's less efficient than I'd like)
     word_order = []
     for tuple in word_list:
         if tuple[0] in words:
@@ -174,8 +177,10 @@ def main():
                 text2 = death_to_johannes(text) # we couldn't define this in all the mess above, just filter for it
                 text3 = clean_punc(text2) # now we have gutenberg free, punc free text, with non-smart " retained
                 text4 = cleaner_punc(text3) # now the " are gone
-
-                word_len, word = longest_word(text4) # this will return an IndexError if the infile can't be read through the johannes withour popping an error
+                
+                # this will return an IndexError if the infile can't be read through the johannes properly
+                # it will only occur if 'y' to try a new file with a non-working file already in
+                word_len, word = longest_word(text4) 
                 wpp = para_size(text4)
                 dialogue = dialogue_length(text3) # we go back to text 3 so that we can have "s still to split by
                 if dialogue != 'ERROR':
