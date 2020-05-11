@@ -139,14 +139,14 @@ def avg_word_len(text):
 def main():
     dict_of_power = {}
 
-    print('This program selects statistics from one or more plaintext books and exports them to a')
-    print('csv file. There are some restrictions as to which files will read, read the README for')
-    print('more information or email us at tec2@illinois.edu.')
+    print('This program reads one or more plaintext Project Gutenberg books from .txt files and selects')
+    print('statistics about the text. It reads out the statistics to a .csv file.')
+    print()
 
     exit_code = 0
     while exit_code != 1:
         try:
-            stupid_value = 1 # will be used to intentionally cause a DivideByZerError later to esc a loop
+            stupid_value = 1 # will be used to intentionally cause a DivideByZeroError later to esc a loop
             file_name = str(input('Enter the filename: '))
             with open(file_name, 'r', encoding = 'utf-8') as f:
                 text = f.read()
